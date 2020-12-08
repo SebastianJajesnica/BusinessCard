@@ -89,15 +89,6 @@ footer{
     padding: 1rem;
 }
 
-.flex-main-container-footer{
-    /* display: flex;
-    justify-content: center;
-    align-content: center;
-    justify-items: center; */
-    
-
-}
-
 .container-footer{
     display: flex;
     flex-direction: column;
