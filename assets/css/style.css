@@ -1,0 +1,135 @@
+/* Font Lato: font-family: 'Lato', sans-serif; 
+
+h1: 3,4 rem 
+h2: 2,3 rem
+h3: 1,5 rem
+h4: 1rem
+h5: 1rem
+p: 1rem
+
+
+*/
+@import url(reset.css);
+
+:root{
+    --color1: #D4E0E8 ; /* bg-color */
+    --color2: #92B7C7 ; /* bg2-color */
+    --color3: #415E51 ; /* gb-color */
+    --color4: #88A176 ; /* gb-color */
+    --color5: #AABD93 ; /* gb-color */
+    --color6: #D2D6B1 ; /* text-color */
+}
+
+html{
+    font-family: 'Lato', sans-serif;
+    font-size: 10px;
+    line-height: 15px;
+    background-color: var(--color2);
+    
+}
+
+h1 {
+    font-size:3.4 rem;
+}
+
+h2 {
+    font-size:2.3 rem;
+}
+
+h3 {
+    font-size:1.5 rem;
+}
+
+h4 {
+    font-size:1 rem;
+}
+
+h5 {
+    font-size:1 rem;
+}
+
+
+header{
+    background-color: var(--color1);
+    min-height: 10rem;
+}
+
+main{
+    /* background-color: var(--color2); */
+    min-height: calc(100vh - 20rem) 
+
+}
+
+footer{
+    background-color: var(--color1);
+    min-height: 10rem;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+}
+
+.flex-main-container-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.flex-container-header {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    flex: 1;
+
+}
+
+.header-logo{
+    height: 10rem;
+    box-sizing: border-box;
+    padding: 1rem;
+}
+
+.flex-main-container-footer{
+    /* display: flex;
+    justify-content: center;
+    align-content: center;
+    justify-items: center; */
+    
+
+}
+
+.container-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+nav a {
+    font-size: 2.0rem;
+    text-decoration: none;
+    color: var(--color3);
+    font-weight: 800;
+
+}
+
+.container-footer:first-child{
+    align-items: flex-start;
+}
+
+.container-footer h4 {
+    display: list-item;
+    list-style-type: disc;
+}
+
+.container-footer > * {
+    padding: 0.2rem;
+    font-size: 1.0rem;
+    text-decoration: none;
+    color: var(--color3);
+    font-weight: 600;
+}
+
+
+
