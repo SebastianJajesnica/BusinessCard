@@ -1,5 +1,10 @@
+/* 
+//Font Lato: font-family: 'Lato', sans-serif;
+*/
+
 p {
     color: #ff0000;
+    font-family: 'Lato', sans-serif;
 }
 
 h2 {
