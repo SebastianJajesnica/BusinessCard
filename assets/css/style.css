@@ -66,6 +66,7 @@ footer{
     display: flex;
     align-content: center;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .flex-main-container-header {
@@ -116,11 +117,21 @@ nav a {
 
 .container-footer > * {
     padding: 0.2rem;
-    font-size: 1.0rem;
+    font-size: 1.3rem;
     text-decoration: none;
     color: var(--color3);
     font-weight: 600;
 }
+
+span {
+    font-weight: 900;
+}
+
+.copyright{
+    display: block;
+}
+
+
 
 
 
