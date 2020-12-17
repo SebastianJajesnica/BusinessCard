@@ -9,7 +9,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href="/assets/img/ico.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">  
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Sebastian Jajeśnica</title>
 </head>
@@ -18,37 +21,346 @@
 
     <header>
         <div class="flex-main-container-header">     
-            <a href="#" >
-                <img class="header-logo" src="assets/img/logo2.png" alt="logo" /> 
+            <a href="#me" >
+                <img class="header-logo" src="assets/img/logo.png" alt="logo" /> 
             </a>
                    
             <nav class="flex-container-header">
-                <a href="#">Doświadczenie</a>
-                <a href="#">Umiejętności</a>
-                <a href="#">Hobby</a>
-                <a href="#">Kontakt</a>
+                <a href="#exp">Doświadczenie</a>
+                <a href="#skills">Umiejętności</a>
+                <a href="#hobby">Hobby</a>
+                <a href="#contact">Kontakt</a>
             </nav>
         </div>
     </header>
 
     <main>
-        <section>
-            <h1>TU bedzie flexbox i po lewej moje zdjecie a po prawej jakiś opis </h1>
-            <h2>Wcześniej jeszcze damy jakieś zdjęcie takie na cały ekran!</h2>
+        <section class="hero"></section>
+
+
+        <section id="me" class="aboutme">
+
+            <div class="aboutme-photo-container">
+                <img src="/assets/img/cv-zdj.png" alt="Sebastian Jajeśnica. Zdjęcie do dokumentu." >
+                
+                <p class="photo-name">sebastian jajeśnica</p>
+                <p class="photo-title">magister inżynier<br>konstruktor</p>
+                
+            </div>
+
+            <p class="aboutme-text">Jestem absolwentem Mechaniki i Budowy Maszyn. Podczas mojej pracy zawodowej pracowałem na stanowiskach, gdzie wymagane było modelowanie w 3D. Jest to dziedzina moich zainteresowań w której z każdym dniem pragnę się rozwijać i odkrywać nowe ciekawe funkcje. <br><br>
+            Dzięki temu chce być zdolny do projektowania najnowszych rozwiązań dla przemysłu. Lubię udoskonalać swoją pracę poprzez używanie makr w języku VBA, dzięki którym moja praca staje się szybsza oraz bardziej efektywna. <br><br>
+            Z czasem okazało się, że programowanie to nie tylko pomoc w aktualnej pracy, ale również swego rodzaju hobby. Dzięki temu ile radości sprawiają mi widoczne efekty programowania stwierdziłem, że chce się rozwijać w tej dziedzinie i dążyć do tego, aby hobby stało się również sposobem na życie.<br><br> <span class="smile">&#128512</span></p>
+       
         </section>
+
+        <section id="exp" class="exp">
+
+            <p class="description">doświadczenie zawodowe</p>
+
+            <div class="exp-main-container">
+
+                <div class="exp-inside-container">
+                    <p class="exp-time">10.2019 - obecnie &#8222nVent&#8221</p>
+                    <p class="exp-title">Inżynier konstruktor</p>
+                    <ul>    
+                        <div class="exp-text">
+                            <li>Praca w dziale R&D</li>
+                            <li>Wykonywanie modeli 3D w SolidWorks</li>
+                            <li>Modyfikacja detali w modelach 3D</li>
+                            <li>Wykonywanie dokumentacji technicznej</li>
+                            <li>Zwiększenie samodzielności wykonywanych obowiązków</li>
+                            <li>Sprawdzanie danych w systemie ERP – SAP</li>
+                            <li>Rozwój nowych produktów – wdrażanie i testowanie nowych rozwiązań</li>
+                            <li>Wprowadzanie w swoje projekty makr pisanych w języku VBA</li>
+                            <li>Współpraca w międzynarodowym zespole (Francja, USA)</li>
+                        </div>
+                    </ul>
+                </div>
+
+                <div class="exp-inside-container">
+                    <p class="exp-time">07.2018 - 10.2019 &#8222nVent&#8221</p>
+                    <p class="exp-title">Młodszy inżynier konstruktor</p>
+                    <ul>   
+                        <div class="exp-text"> 
+                            <li>Praca w dziale R&D</li>
+                            <li>Wykonywanie modeli 3D w SolidWorks</li>
+                            <li>Modyfikacja detali w modelach 3D</li>
+                            <li>Wykonywanie dokumentacji technicznej</li>
+                            <li>Praca z systemem ERP - J.D. Edwards</li>
+                            <li>Tworzenie instrukcji montażu do poszczególnych elementów</li>
+                            <li>Tworzenie prototypów danych produktów</li>
+                            <li>Przeprowadzanie testów prototypów</li>
+                            <li>Współpraca w międzynarodowym zespole (Francja, USA)</li>
+                        </div>
+                    </ul>
+                </div>
+
+                <div class="exp-inside-container">
+                    <p class="exp-time">07.2017 - 09.2017 &#8222Moy Park&#8221 (Wielka Brytania)</p>
+                    <p class="exp-title">Pracownik lini produkcyjnej</p>
+                    <ul>    
+                        <div class="exp-text">
+                            <li>Praca na wielu różnych stanowiskach pracy fizycznej</li>
+                            <li>Doskonalenie języka angielskiego</li>
+                            <li>Współpraca z międzynarodowym zespołem pracowniczym</li>
+                            <li>Poznanie wielu rozwiązań konstrukcyjnych</li>
+                        </div>
+                    </ul>
+                </div>
+
+                <div class="exp-inside-container">
+                    <p class="exp-time">07.2016 - 08.2016 &#8222Broen&#8221</p>
+                    <p class="exp-title">Praktykant</p>
+                    <ul>    
+                        <div class="exp-text">
+                            <li>Wykonanie prostego projektu</li>
+                            <li>Zmiany rysunków technicznych w programie SolidWorks</li>
+                            <li>Wykonywanie rysunków technicznych drobnych elementów</li>
+                            <li>Zapoznanie się z urządzeniami CNC</li>
+                            <li>Wykonywanie dokumentacji różnych rozwiązań technologicznych w zaworach</li>
+                        </div>
+                    </ul>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="skills" class="skills">
+
+            <p class="description-skills">umiejętności</p>
+
+            <div class="card red">
+                <div class="card-percent">
+                    <svg>
+                        <circle cx="105" cy="105" r="100"></circle>
+                        <circle cx="105" cy="105" r="100" style="--percent: 95"></circle>
+                    </svg>
+                    <div class="card-number">
+                        <h3>95<span>%</span></h3>
+                    </div>
+                </div>
+                <div class="card-title">   
+                    <h2>SOLIDWORKS</h2>
+                </div>
+            </div>
+
+            <div class="card green">
+                <div class="card-percent">
+                    <svg>
+                        <circle cx="105" cy="105" r="100"></circle>
+                        <circle cx="105" cy="105" r="100" style="--percent: 80"></circle>
+                    </svg>
+                    <div class="card-number">
+                        <h3>80<span>%</span></h3>
+                    </div>
+                </div>
+                <div class="card-title">   
+                    <h2>INVENTOR</h2>
+                </div>
+            </div>
+
+            <div class="card blue">
+                <div class="card-percent">
+                    <svg>
+                        <circle cx="105" cy="105" r="100"></circle>
+                        <circle cx="105" cy="105" r="100" style="--percent: 75"></circle>
+                    </svg>
+                    <div class="card-number">
+                        <h3>75<span>%</span></h3>
+                    </div>
+                </div>
+                <div class="card-title">   
+                    <h2>AUTO CAD</h2>
+                </div>
+            </div>
+
+            <div class="card black">
+                <div class="card-percent">
+                    <svg>
+                        <circle cx="105" cy="105" r="100"></circle>
+                        <circle cx="105" cy="105" r="100" style="--percent: 75"></circle>
+                    </svg>
+                    <div class="card-number">
+                        <h3>75<span>%</span></h3>
+                    </div>
+                </div>
+                <div class="card-title">   
+                    <h2>SIEMENS NX</h2>
+                </div>
+            </div>
+
+            <div class="card orange">
+                <div class="card-percent">
+                    <svg>
+                        <circle cx="105" cy="105" r="100"></circle>
+                        <circle cx="105" cy="105" r="100" style="--percent: 70"></circle>
+                    </svg>
+                    <div class="card-number">
+                        <h3>65<span>%</span></h3>
+                    </div>
+                </div>
+                <div class="card-title">   
+                    <h2>MSC ADAMS</h2>
+                </div>
+            </div>
+
+            <div class="card yellow">
+                <div class="card-percent">
+                    <svg>
+                        <circle cx="105" cy="105" r="100"></circle>
+                        <circle cx="105" cy="105" r="100" style="--percent: 65"></circle>
+                    </svg>
+                    <div class="card-number">
+                        <h3>65<span>%</span></h3>
+                    </div>
+                </div>
+                <div class="card-title">   
+                    <h2>J.D. EDWARDS</h2>
+                </div>
+            </div>
+
+            <div class="card red">
+                <div class="card-percent">
+                    <svg>
+                        <circle cx="105" cy="105" r="100"></circle>
+                        <circle cx="105" cy="105" r="100" style="--percent: 60"></circle>
+                    </svg>
+                    <div class="card-number">
+                        <h3>60<span>%</span></h3>
+                    </div>
+                </div>
+                <div class="card-title">   
+                    <h2>SOLID EDGE</h2>
+                </div>
+            </div>
+
+            <div class="card green">
+                <div class="card-percent">
+                    <svg>
+                        <circle cx="105" cy="105" r="100"></circle>
+                        <circle cx="105" cy="105" r="100" style="--percent: 55"></circle>
+                    </svg>
+                    <div class="card-number">
+                        <h3>55<span>%</span></h3>
+                    </div>
+                </div>
+                <div class="card-title">   
+                    <h2>HTML</h2>
+                </div>
+            </div>
+
+            <div class="card blue">
+                <div class="card-percent">
+                    <svg>
+                        <circle cx="105" cy="105" r="100"></circle>
+                        <circle cx="105" cy="105" r="100" style="--percent: 55"></circle>
+                    </svg>
+                    <div class="card-number">
+                        <h3>55<span>%</span></h3>
+                    </div>
+                </div>
+                <div class="card-title">   
+                    <h2>CSS</h2>
+                </div>
+            </div>
+
+            <div class="card black">
+                <div class="card-percent">
+                    <svg>
+                        <circle cx="105" cy="105" r="100"></circle>
+                        <circle cx="105" cy="105" r="100" style="--percent: 45"></circle>
+                    </svg>
+                    <div class="card-number">
+                        <h3>45<span>%</span></h3>
+                    </div>
+                </div>
+                <div class="card-title">   
+                    <h2>JAVA SCRIPT</h2>
+                </div>
+            </div>
+
+            <div class="card orange">
+                <div class="card-percent">
+                    <svg>
+                        <circle cx="105" cy="105" r="100"></circle>
+                        <circle cx="105" cy="105" r="100" style="--percent: 40"></circle>
+                    </svg>
+                    <div class="card-number">
+                        <h3>45<span>%</span></h3>
+                    </div>
+                </div>
+                <div class="card-title">   
+                    <h2>VBA</h2>
+                </div>
+            </div>
+
+            <div class="card yellow">
+                <div class="card-percent">
+                    <svg>
+                        <circle cx="105" cy="105" r="100"></circle>
+                        <circle cx="105" cy="105" r="100" style="--percent: 40"></circle>
+                    </svg>
+                    <div class="card-number">
+                        <h3>40<span>%</span></h3>
+                    </div>
+                </div>
+                <div class="card-title">   
+                    <h2>C++</h2>
+                </div>
+            </div>
+
+            <div class="card red">
+                <div class="card-percent">
+                    <svg>
+                        <circle cx="105" cy="105" r="100"></circle>
+                        <circle cx="105" cy="105" r="100" style="--percent: 35"></circle>
+                    </svg>
+                    <div class="card-number">
+                        <h3>35<span>%</span></h3>
+                    </div>
+                </div>
+                <div class="card-title">   
+                    <h2>MATLAB</h2>
+                </div>
+            </div>
+
+            
+
+
+
+        </section>
+
+        <section id="hobby" class="hobby">
+
+            <p>TU BEDZIE HOBBY TEKST</p>
+           
+
+        </section>
+
+        <section id="contact" class="contact">
+
+            <p>TU BEDZIE FORMULARZ KONTAKTOWY TEKST</p>
+
+        </section>
+
+
+
     </main>
 
 
     <footer>
-            <div class="container-footer">
-                <a href="#"><span>O mnie</span></a>
-                <a href="#">Doświadczenie</a>
-                <a href="#">Umiejętności</a>
-                <a href="#">Hobby</a>
-                <a href="#">Kontakt</a>
+        <div class="container-context-footer">
+            <div class="container-context-footer-items">
+                <a href="#me" class="footer-aboutme">O mnie</a>
+                <a href="#exp">Doświadczenie</a>
+                <a href="#skills">Umiejętności</a>
+                <a href="#hobby">Hobby</a>
+                <a href="#contact">Kontakt</a>
             </div>
 
-            <div class="container-footer">
+            <div class="container-context-footer-items">
                 
                     <h3>Konstruktor - programy:</h3>
                     <h4>Solidworks</h4>
@@ -58,7 +370,7 @@
                 
             </div>
 
-            <div class="container-footer">
+            <div class="container-context-footer-items">
                 
                     <h3>Developer - technologie:</h3>
                     <h4>HTML</h4>
@@ -67,8 +379,20 @@
                     <h4>C++</h4>
                 
             </div>
+        </div>
 
-            <div class="copyright">Copyright</div>
+        <div class="container-social-footer">
+
+            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-github"></a>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+
+        </div>
+
+
+
+        <div class="copyright">Copyright &copy 2020 Sebastian Jajeśnica. All rights reserved. </div>
     </footer>
 
 

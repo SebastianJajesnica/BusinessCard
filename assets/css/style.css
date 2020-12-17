@@ -1,4 +1,5 @@
-/* Font Lato: font-family: 'Lato', sans-serif; 
+/*  Font Lato:      font-family: 'Lato', sans-serif; 
+    Font Courgette: font-family: 'Courgette', cursive;
 
 h1: 3,4 rem 
 h2: 2,3 rem
@@ -7,16 +8,18 @@ h4: 1rem
 h5: 1rem
 p: 1rem
 
+USUN BORDERY KOLOROWE Z KODU !!!!!!!!!!!
+
 
 */
 @import url(reset.css);
 
 :root{
-    --color1: #D4E0E8 ; /* bg-color */
+    --color1: #D4E0E8 ; /* bg-color - menu + footer  */
     --color2: #92B7C7 ; /* bg2-color */
-    --color3: #415E51 ; /* gb-color */
+    --color3: #415E51 ; /* gb-color ---> TEXT COLOR*/
     --color4: #88A176 ; /* gb-color */
-    --color5: #AABD93 ; /* gb-color */
+    --color5: #AABD93 ; /* gb-color - background for whole site */
     --color6: #D2D6B1 ; /* text-color */
 }
 
@@ -24,7 +27,6 @@ html{
     font-family: 'Lato', sans-serif;
     font-size: 10px;
     line-height: 15px;
-    background-color: var(--color2);
     
 }
 
@@ -49,24 +51,29 @@ h5 {
 }
 
 
+
+
+
+
+
+
+/* 
+----------------------------------------------------------------------------------------------------------------------------------------------
+START HEADER
+---------------------------------------------------------------------------------------------------------------------------------------------- 
+*/
+
+
+
+/* 
+--------------------------------------
+WHOLE HEADER
+-------------------------------------- 
+*/
+
 header{
     background-color: var(--color1);
     min-height: 10rem;
-}
-
-main{
-    /* background-color: var(--color2); */
-    min-height: calc(100vh - 20rem) 
-
-}
-
-footer{
-    background-color: var(--color1);
-    min-height: 10rem;
-    display: flex;
-    align-content: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
 }
 
 .flex-main-container-header {
@@ -75,14 +82,12 @@ footer{
     justify-content: space-between;
 }
 
-.flex-container-header {
-    display:flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    flex: 1;
 
-}
+/* 
+--------------------------------------
+LOGO HEADER
+-------------------------------------- 
+*/
 
 .header-logo{
     height: 10rem;
@@ -90,11 +95,21 @@ footer{
     padding: 1rem;
 }
 
-.container-footer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+
+
+/* 
+--------------------------------------
+NAV-MENU HEADER
+-------------------------------------- 
+*/
+
+.flex-container-header {
+    display:flex;
+    justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
+    flex: 1;
+
 }
 
 
@@ -106,16 +121,471 @@ nav a {
 
 }
 
-.container-footer:first-child{
-    align-items: flex-start;
+
+/* 
+----------------------------------------------------------------------------------------------------------------------------------------------
+END HEADER
+---------------------------------------------------------------------------------------------------------------------------------------------- 
+*/
+
+
+
+
+/* 
+----------------------------------------------------------------------------------------------------------------------------------------------
+START MAIN
+---------------------------------------------------------------------------------------------------------------------------------------------- 
+*/
+
+
+/* 
+--------------------------------------
+MAIN WHOLE
+-------------------------------------- 
+*/
+
+
+main{
+    /* background-color: var(--color2); */
+    min-height: calc(100vh - 20rem) 
+
 }
 
-.container-footer h4 {
-    display: list-item;
+
+/* 
+--------------------------------------
+HERO SECTION
+-------------------------------------- 
+*/
+
+section.hero{
+    height: 55rem;
+    background-image: url(../img/hero.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+
+/* 
+--------------------------------------
+ABOUT ME SECTION
+-------------------------------------- 
+*/
+
+/* Main styling for about me section */
+section.aboutme{
+    min-height : 50rem;
+    /* border: solid 2px red; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2rem;
+    background-color: var(--color5);
+
+}
+
+/* Container with photo and caption - AboutMe section */
+.aboutme-photo-container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Photo inside container in AboutMe section */
+.aboutme-photo-container img {
+    width:  30rem;
+    border-radius: 15rem;
+    margin: 5rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+/* Styling for name and surname */
+.photo-name{
+    font-size: 4rem;
+    color: var(--color3);
+    font-weight: 900;
+    text-transform: capitalize;
+    margin: 1rem;
+}
+
+/* Styling for title  */
+.photo-title{
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin: 1rem;
+    margin-bottom: 4rem;
+    color: var(--color3);
+    text-align: center;
+}
+
+/* Styling AboutMe text */
+.aboutme-text {
+    max-width: 80rem;
+    text-align: center;
+    font-family: 'Courgette', cursive;
+    font-size: 2.5rem;
+    margin: 2rem;
+
+}
+
+/* Styling smile after AboutMe text */
+.smile{
+    font-size: 5rem;
+}
+
+/* 
+--------------------------------------
+EXPERIENCE SECTION
+-------------------------------------- 
+*/
+
+/* Main styling for experience section */
+section.exp{
+    min-height : 50rem;
+    /* min-height : 100vh; */
+    background-color: var(--color2);
+    /* border: solid 2px yellow; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2rem;
+}
+
+/* Styling for description of this section */
+.description{
+    font-size: 5rem;
+    margin: 3rem;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+    font-family: 'Courgette', cursive;
+    color: var(--color3);
+    text-shadow: -2px 0 #000, 2px 0 #000, 0 -2px #000, 0 2px #000 ;
+
+}
+
+/* Styling for container with hitherto jobs */
+.exp-main-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    
+
+}
+
+/* Specyfic container with one job */
+.exp-inside-container{
+    
+    border: solid 1rem var(--color1);
+    border-radius: 5rem;
+    margin: 2rem;
+    width: calc(100vw/2 - 5%);
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+/* Container with one job - time header */
+.exp-time {
+    font-size: 2rem;
+    font-weight: 900;
+    margin: .5rem;
+    color: var(--color3);
+    text-decoration: underline;
+}
+
+/* Container with one job - title header */
+.exp-title{
+    font-size: 1.7rem;
+    font-weight: 900;
+    margin: .3rem;
+    color: var(--color1);
+    text-transform: uppercase;
+    text-shadow: -1px 0 #000, 1px 0 #000, 0 -1px #000, 0 1px #000 ;
+}
+
+/* Container with one job - text */
+.exp-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+}
+
+/* Styling li */
+.exp-inside-container li{
     list-style-type: disc;
+
 }
 
-.container-footer > * {
+
+
+/* 
+--------------------------------------
+SKILLS SECTION
+-------------------------------------- 
+*/
+
+/* Main styling for skills section */
+section.skills{
+    min-height : 50rem;
+    background-color: var(--color5);
+    /* border: solid 2px red; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 2rem;
+}
+
+/* Styling for description of this section */
+.description-skills{
+    width: 100vw;
+    text-align: center;
+    font-size: 6rem;
+    margin: 3rem;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+    font-family: 'Courgette', cursive;
+    color: var(--color3);
+    text-shadow: -1px 0 #fff, 1px 0 #fff, 0 -1px #fff, 0 1px #fff ;
+    
+}
+
+/* CARD - Card styling */
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--color1);
+    margin: 2rem 2rem;
+    width: 30rem;
+    height: 35rem;
+    border-radius: 5rem ;
+    box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.5);
+}
+
+/* CARD - Percent styling */
+.card-percent {
+    position: relative;
+}
+
+/* CARD - Percent svg styling */
+.card svg{
+    position: relative;
+    width: 21rem;
+    height: 21rem;
+    transform: rotate(-90deg);
+}
+
+/* CARD - Percent svg styling - circle */
+.card svg circle{
+   width: 100%;
+   height: 100%;
+   fill: none;
+   stroke: #fff ;
+   stroke-width: 1rem;
+   stroke-linecap: round;
+}
+
+/* CARD - Styling circle - black */
+.card.black svg circle:last-of-type{
+    stroke-dasharray: 625px;
+    stroke-dashoffset: calc(625px - (625px * var(--percent)) / 100);
+    stroke:black
+}
+
+/* CARD - Styling circle - red */
+.card.red svg circle:last-of-type{
+    stroke-dasharray: 625px;
+    stroke-dashoffset: calc(625px - (625px * var(--percent)) / 100);
+    stroke:red
+}
+
+/* CARD - Styling circle - green */
+.card.green svg circle:last-of-type{
+    stroke-dasharray: 625px;
+    stroke-dashoffset: calc(625px - (625px * var(--percent)) / 100);
+    stroke:green
+}
+
+/* CARD - Styling circle - blue */
+.card.blue svg circle:last-of-type{
+    stroke-dasharray: 625px;
+    stroke-dashoffset: calc(625px - (625px * var(--percent)) / 100);
+    stroke:blue
+}
+
+/* CARD - Styling circle - orange */
+.card.orange svg circle:last-of-type{
+    stroke-dasharray: 625px;
+    stroke-dashoffset: calc(625px - (625px * var(--percent)) / 100);
+    stroke:orange
+}
+
+/* CARD - Styling circle - yellow */
+.card.yellow svg circle:last-of-type{
+    stroke-dasharray: 625px;
+    stroke-dashoffset: calc(625px - (625px * var(--percent)) / 100);
+    stroke:yellow
+}
+
+/* CARD - Number of percentage styling */
+.card .card-number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) ;
+}
+
+/* CARD - Number of percentage styling number */
+.card .card-number h3 {
+    font-weight: 800;
+    font-size: 3.5rem;
+}
+
+/* CARD - Number of percentage styling percent symbol */
+.card .card-number h3 span {
+    font-size: 2.5rem;
+}
+
+/* CARD - Card title styling */
+.card .card-title h2 {
+    margin: 2.5rem 0 0;
+    font-weight: 800;
+    font-size: 2.5rem;
+    color: var(--color3);
+    text-shadow: -1px 0 #fff, 1px 0 #fff, 0 -1px #fff, 0 1px #fff ;
+
+
+
+}
+
+/* 
+--------------------------------------
+HOBBY SECTION
+-------------------------------------- 
+*/
+
+
+section.hobby{
+    min-height : 50rem;
+    background-color: var(--color2);
+    border: solid 2px yellow;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2rem;
+}
+
+
+
+/* 
+--------------------------------------
+CONTACT SECTION
+-------------------------------------- 
+*/
+
+
+section.contact{
+    min-height : 50rem;
+    background-color: var(--color5);
+    border: solid 2px red;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+----------------------------------------------------------------------------------------------------------------------------------------------
+END MAIN
+---------------------------------------------------------------------------------------------------------------------------------------------- 
+*/
+
+
+
+
+
+
+
+
+
+/* 
+----------------------------------------------------------------------------------------------------------------------------------------------
+START FOOTER
+---------------------------------------------------------------------------------------------------------------------------------------------- 
+*/
+
+
+
+/* 
+--------------------------------------
+WHOLE FOOTER
+-------------------------------------- 
+*/
+
+footer{
+    background-color: var(--color1);
+    min-height: 10rem;
+   
+}
+
+
+/* 
+--------------------------------------
+CONTEXT FOOTER
+-------------------------------------- 
+*/
+
+/* Main container (1st level) for context footer */
+.container-context-footer{
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 1.5rem;
+}
+
+/* Each containter (2nd level) inside main container */
+.container-context-footer-items{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling all items in 2nd level container */
+.container-context-footer-items > * {
     padding: 0.2rem;
     font-size: 1.3rem;
     text-decoration: none;
@@ -123,13 +593,113 @@ nav a {
     font-weight: 600;
 }
 
-span {
+/* Styling "about me" link in footer */
+a.footer-aboutme {
     font-weight: 900;
+    font-size: 1.6rem;
 }
+
+/* Styling menu in footer */
+.container-context-footer-items:first-child{
+    align-items: flex-start;
+}
+
+/* Styling menu's links in footer */
+.container-context-footer-items a {
+    margin: 0.5rem;
+}
+
+/* Styling headers in footer */
+.container-context-footer-items h3 {
+    margin-bottom: 1rem;
+}
+
+/* Styling lists in footer */
+.container-context-footer-items h4 {
+    display: list-item;
+    list-style-type: disc;
+    margin: 0.3rem;
+}
+
+
+
+
+
+
+
+/* 
+--------------------------------------
+SOCIAL MEDI FOOTER
+-------------------------------------- 
+*/
+
+/* Container for social icos */
+.container-social-footer{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1.5rem;
+}
+
+/* Styling social-ico */
+.fa {
+    padding: 2rem;
+    font-size: 3rem;
+    width: 3rem;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    margin: 0px 6rem;
+  }
+/* Styling social-ico hover */
+.fa:hover {
+opacity: 0.7;
+}
+
+/* Linkedin ico colors */
+.fa-linkedin {
+    background: #007bb6;
+    color: white;
+}
+
+/* GitHub ico colors */
+.fa-github {
+    background: #000;
+    color: white;
+}
+
+/* Facebook ico colors */
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+/* Twitter ico colors */
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+    }   
+
+/* 
+--------------------------------------
+COPYRIGHT FOOTER
+-------------------------------------- 
+*/
 
 .copyright{
     display: block;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 2rem;
 }
+
+
+/* 
+----------------------------------------------------------------------------------------------------------------------------------------------
+END FOOTER
+---------------------------------------------------------------------------------------------------------------------------------------------- 
+*/
 
 
 
