@@ -8,7 +8,9 @@ h4: 1rem
 h5: 1rem
 p: 1rem
 
-USUN BORDERY KOLOROWE Z KODU !!!!!!!!!!!
+USUŃ BORDERY KOLOROWE Z KODU !!!!!!!!!!!
+
+JAK JUZ ZROBISZ RWD TO WŁĄCZ Z HTML: overflow-x: hidden; 
 
 
 */
@@ -21,12 +23,15 @@ USUN BORDERY KOLOROWE Z KODU !!!!!!!!!!!
     --color4: #88A176 ; /* gb-color */
     --color5: #AABD93 ; /* gb-color - background for whole site */
     --color6: #D2D6B1 ; /* text-color */
+    --height: 56rem;
+    --main-width: calc(100vw - 17px);
 }
 
 html{
     font-family: 'Lato', sans-serif;
     font-size: 10px;
     line-height: 15px;
+    /* overflow-x: hidden; */
     
 }
 
@@ -73,7 +78,13 @@ WHOLE HEADER
 
 header{
     background-color: var(--color1);
-    min-height: 10rem;
+    height: 10rem;
+    position: fixed;
+    box-sizing: border-box;
+    width: var(--main-width);
+    z-index: 1;
+    top: 0px;
+    border: solid 1px black;
 }
 
 .flex-main-container-header {
@@ -147,7 +158,10 @@ MAIN WHOLE
 
 main{
     /* background-color: var(--color2); */
-    min-height: calc(100vh - 20rem) 
+    min-height: calc(100vh - 20rem);
+    width: var(--main-width)
+   
+    
 
 }
 
@@ -159,6 +173,7 @@ HERO SECTION
 */
 
 section.hero{
+    margin-top: 10rem;
     height: 55rem;
     background-image: url(../img/hero.jpg) ;
     background-repeat: no-repeat;
@@ -187,10 +202,24 @@ section.aboutme{
 
 /* Container with photo and caption - AboutMe section */
 .aboutme-photo-container{
+    margin-top: 12rem;
     display:flex;
     flex-direction: column;
     align-items: center;
 }
+
+/* Styling image and text after hover  */
+.aboutme-photo-container:hover{
+    transform: scale(1.2);  
+}
+
+/* Styling text after hover into previous hover  */
+.aboutme-photo-container p:hover{
+    color: orange;   
+    text-shadow: -1px 0 #fff, 1px 0 #fff, 0 -1px #fff, 0 1px #fff ;
+}
+
+
 
 /* Photo inside container in AboutMe section */
 .aboutme-photo-container img {
@@ -216,7 +245,7 @@ section.aboutme{
     text-transform: uppercase;
     font-weight: 800;
     margin: 1rem;
-    margin-bottom: 4rem;
+    margin-bottom: 7rem;
     color: var(--color3);
     text-align: center;
 }
@@ -234,6 +263,34 @@ section.aboutme{
 /* Styling smile after AboutMe text */
 .smile{
     font-size: 5rem;
+    text-align: center;
+    animation: smileRolling 5s;
+    animation-iteration-count: infinite;
+    transition-timing-function: ease-in-out ;
+}
+
+@keyframes smileRolling {
+
+    0% {
+        transform:translateX(0px) rotate(0deg);
+    }
+
+    25% {
+        transform:translateX(150px) rotate(360deg);
+    }
+
+    50% {
+        transform:translateX(0px) rotate(0deg);
+    }
+
+    75% {
+        transform:translateX(-150px) rotate(-360deg);
+    }
+
+    100% {
+        transform:translateX(0px) rotate(0deg);
+    }
+
 }
 
 /* 
@@ -256,14 +313,16 @@ section.exp{
 }
 
 /* Styling for description of this section */
-.description{
+.description-exp{
     font-size: 5rem;
     margin: 3rem;
     margin-bottom: 1rem;
+    margin-top: 12rem;
     text-transform: capitalize;
     font-family: 'Courgette', cursive;
     color: var(--color3);
     text-shadow: -2px 0 #000, 2px 0 #000, 0 -2px #000, 0 2px #000 ;
+    text-align: center;
 
 }
 
@@ -271,22 +330,25 @@ section.exp{
 .exp-main-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    align-content: space-between;
     
     
 
 }
 
-/* Specyfic container with one job */
+/* Specific container with one job */
 .exp-inside-container{
     
     border: solid 1rem var(--color1);
     border-radius: 5rem;
     margin: 2rem;
     width: calc(100vw/2 - 5%);
-    height: 30rem;
+    /* width:80rem; */
+    min-height: 30rem;
     display: flex;
     flex-direction: column;
+    align-content: space-around;
     align-items: center;
     justify-content: center;
     
@@ -297,8 +359,10 @@ section.exp{
     font-size: 2rem;
     font-weight: 900;
     margin: .5rem;
+    margin-top: 1.5rem;
     color: var(--color3);
     text-decoration: underline;
+    text-align: center;
 }
 
 /* Container with one job - title header */
@@ -309,6 +373,7 @@ section.exp{
     color: var(--color1);
     text-transform: uppercase;
     text-shadow: -1px 0 #000, 1px 0 #000, 0 -1px #000, 0 1px #000 ;
+    text-align: center;
 }
 
 /* Container with one job - text */
@@ -322,6 +387,9 @@ section.exp{
 /* Styling li */
 .exp-inside-container li{
     list-style-type: disc;
+    list-style-position: inside;
+    text-align: center;
+    margin: .5rem;
 
 }
 
@@ -343,6 +411,7 @@ section.skills{
     align-items: center;
     flex-wrap: wrap;
     font-size: 2rem;
+    padding-bottom: 3rem;
 }
 
 /* Styling for description of this section */
@@ -351,7 +420,8 @@ section.skills{
     text-align: center;
     font-size: 6rem;
     margin: 3rem;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
+    margin-top: 12rem;
     text-transform: capitalize;
     font-family: 'Courgette', cursive;
     color: var(--color3);
@@ -371,6 +441,11 @@ section.skills{
     height: 35rem;
     border-radius: 5rem ;
     box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.5);
+}
+
+/* CARD - Card styling after hover */
+.card:hover{
+    transform: scale(1.2);
 }
 
 /* CARD - Percent styling */
@@ -476,15 +551,90 @@ HOBBY SECTION
 */
 
 
+/* Main styling for hobby section */
 section.hobby{
-    min-height : 50rem;
     background-color: var(--color2);
-    border: solid 2px yellow;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
     font-size: 2rem;
+    padding: 2rem;
 }
+
+/* Styling for description of this section */
+.description-hobby{
+    font-size: 5rem;
+    margin: 1rem 0;
+    margin-top: 12rem;
+    text-transform: capitalize;
+    font-family: 'Courgette', cursive;
+    color: var(--color3);
+    text-shadow: -2px 0 #000, 2px 0 #000, 0 -2px #000, 0 2px #000 ;
+
+}
+
+/* Styling container(includes all cards)- lev1 */
+.hobby-container-main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    
+}
+
+/* Styling container (one card) - lev2 */
+.hobby-container{
+    display: flex;
+    flex-direction: column;
+    border: solid .5rem var(--color6);
+    margin: 1rem;
+    border-radius: 10rem;
+
+}
+
+/* Styling container (img + txt) - lev3 */
+.hobby-container-inside{
+    display: flex;
+    align-items: center;
+    /* width:80rem; */
+    flex: 1 100% auto;
+    overflow: hidden;
+}
+
+/* Styling img into lev3 container */
+.hobby-container-inside img{
+    width: 25vw;
+    padding: 2rem;
+    border-radius: 15rem;
+    
+}
+
+/* Styling img into lev3 container after hover */
+.hobby-container-inside img:hover{
+    transform: scale(1.02);
+    
+}
+
+/* Styling txt into lev3 container */
+.hobby-container-inside p{
+    max-width: 35rem;
+    /* height: 20vh; */
+    text-align: center;
+    /* padding: 1rem; */
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+/* Styling description into lev2 container */
+.container-description-hobby{
+    align-self: center;
+    margin-top: 1rem;
+    color: var(--color3);
+    font-size: 3rem;
+    text-shadow: -1px 0 #fff, 1px 0 #fff, 0 -1px #fff, 0 1px #fff;
+}
+
 
 
 
@@ -494,36 +644,260 @@ CONTACT SECTION
 -------------------------------------- 
 */
 
-
+/* Main styling for contact section */
 section.contact{
     min-height : 50rem;
     background-color: var(--color5);
-    border: solid 2px red;
+    /* border: solid 2px red; */
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    padding: 1rem;
 }
 
+/* Styling for description of this section */
+.description-contact{
+    width: 100vw;
+    text-align: center;
+    font-size: 6rem;
+    margin: 3rem;
+    margin-bottom: 1rem;
+    margin-top: 12rem;
+    text-transform: capitalize;
+    font-family: 'Courgette', cursive;
+    color: var(--color3);
+    text-shadow: -1px 0 #fff, 1px 0 #fff, 0 -1px #fff, 0 1px #fff ;
+    
+}
+
+/* Form styling 1lev container */
+form {
+    background-color: var(--color1);
+    display: flex;
+    margin: 1rem;
+    border-radius: 3rem;
+    border: solid 2px black;
+}
+
+/* Left side of form (name,surname etc.) 2lev container */
+.form-one-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+/* Right side of form (textarea, submit button) 2lev container */
+.form-two-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: stretch; */
+
+}
+
+/* Styling for each element in form */
+form *{
+    margin: 1rem
+}
+
+/* Styling for sex selection */
+.sex{
+    text-align: center;
+}
+
+/* Styling for textarea */
+.form-two-container textarea {
+    width: 40vw;
+    max-width: 70rem;
+    height: 30rem;
+    resize:none ;
+}
+
+/* Styling submit button */
+.form-two-container input {
+    font-weight: 900;
+    font-size: 2.5rem;
+    background-color: var(--color5);
+    border: solid .5rem var(--color3);
+    cursor: pointer;
+}
+
+/* Space needed for animated thanks */
+.space {
+    
+    height: var(--height);
+    position: relative;
+    /* border: solid 2px red; */
+}
+
+/* Styling for text "THANK YOU" + relative position + animation SCALE */
+.thanks {
+ 
+    position: relative;
+    left:0;
+    top: calc( var(--height) - 1.5 * var(--height) );
+    transform: translateY(-50%);
+    animation: scale 20s; 
+    animation-iteration-count: infinite;
+    
+}
+
+/* Styling for letters container + animation SPIN */
+.thanks p {
+    color: var(--color3);
+    letter-spacing: 0rem;
+    font-size: 5rem;
+    overflow: hidden;
+    animation: spin 20s; 
+    animation-iteration-count: infinite;
+}
+
+/* Styling each letter */
+.letters span:nth-child(1){
+    position:relative;
+    animation: animateLetters 10s;
+    animation-iteration-count: infinite;
+    color: red;
+    text-shadow: -1px 0 #fff, 1px 0 #fff, 0 -1px #fff, 0 1px #fff;
+    
+}
+
+/* Styling each letter */
+.letters span:nth-child(2){
+    position:relative;
+    animation: animateLetters 10s;
+    animation-delay: 0.25s;
+    animation-iteration-count: infinite;
+    color: green;
+    text-shadow: -1px 0 #fff, 1px 0 #fff, 0 -1px #fff, 0 1px #fff;
+    
+}
+
+/* Styling each letter */
+.letters span:nth-child(3){
+    position:relative;
+    animation: animateLetters 10s;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+    color: blue;
+    text-shadow: -1px 0 #fff, 1px 0 #fff, 0 -1px #fff, 0 1px #fff;
+    
+}
+
+/* Styling each letter */
+.letters span:nth-child(4){
+    position:relative;
+    animation: animateLetters 10s;
+    animation-delay: 0.75s;
+    animation-iteration-count: infinite;
+    color: orange;
+    text-shadow: -1px 0 #fff, 1px 0 #fff, 0 -1px #fff, 0 1px #fff;
+
+    
+}
+
+/* Styling each letter */
+.letters span:nth-child(5){
+    position:relative;
+    animation: animateLetters 10s;
+    animation-delay: 1.00s;
+    animation-iteration-count: infinite;
+    color: yellow;
+    text-shadow: -1px 0 #000, 1px 0 #000, 0 -1px #000, 0 1px #000;
+
+    
+}
+
+/* Styling each letter */
+.letters span:nth-child(6){
+    position:relative;
+    animation: animateLetters 10s;
+    animation-delay: 1.25s;
+    animation-iteration-count: infinite;
+    color: black;
+    text-shadow: -1px 0 #fff, 1px 0 #fff, 0 -1px #fff, 0 1px #fff;
+
+    
+}
+
+/* Styling each letter */
+.letters span:nth-child(7){
+    position:relative;
+    animation: animateLetters 10s;
+    animation-delay: 1.50s;
+    animation-iteration-count: infinite;
+    color: purple;
+    text-shadow: -1px 0 #fff, 1px 0 #fff, 0 -1px #fff, 0 1px #fff;
+
+    
+}
+
+/* Styling each letter */
+.letters span:nth-child(8){
+    position:relative;
+    animation: animateLetters 10s;
+    animation-delay: 1.75s;
+    animation-iteration-count: infinite;
+    color: white;
+    text-shadow: -1px 0 #000, 1px 0 #000, 0 -1px #000, 0 1px #000;
+
+    
+}
+
+/* Animation for appear and disappear letters */
+@keyframes animateLetters {
+
+    0% {
+        bottom: -100px;
+    }
+
+    25% {
+        bottom: 0px;
+    }
+
+    75% {
+        bottom: 0px;
+    }
+
+    100% {
+        bottom: -100px;
+    }
+
+}
+
+/* Animation for spining */
+@keyframes spin {
 
 
+    0% {transform:rotate(0deg)}
+
+    25% {transform:rotate(360deg)}
+
+    50% {transform:rotate(-0deg)}
+
+    100% {transform:rotate(360deg)}
+
+}
+
+/* Animation for scaling */
+@keyframes scale {
 
 
+    0% {transform:scale(1)}
 
+    20% {transform:scale(1.5)}
 
+    60% {transform:scale(1)}
 
+    80% {transform:scale(1.5)}
 
+    100% {transform:scale(1)}
 
-
-
-
-
-
-
-
-
-
-
+}
 
 
 /* 
@@ -557,6 +931,7 @@ WHOLE FOOTER
 footer{
     background-color: var(--color1);
     min-height: 10rem;
+    width: var(--main-width)
    
 }
 
@@ -576,7 +951,7 @@ CONTEXT FOOTER
     padding: 1.5rem;
 }
 
-/* Each containter (2nd level) inside main container */
+/* Each container (2nd level) inside main container */
 .container-context-footer-items{
     display: flex;
     flex-direction: column;
@@ -629,11 +1004,11 @@ a.footer-aboutme {
 
 /* 
 --------------------------------------
-SOCIAL MEDI FOOTER
+SOCIAL MEDIA FOOTER
 -------------------------------------- 
 */
 
-/* Container for social icos */
+/* Container for social icons */
 .container-social-footer{
     display: flex;
     align-content: center;
@@ -650,7 +1025,7 @@ SOCIAL MEDI FOOTER
     text-align: center;
     text-decoration: none;
     border-radius: 50%;
-    margin: 0px 6rem;
+    margin: 1rem 6rem;
   }
 /* Styling social-ico hover */
 .fa:hover {
