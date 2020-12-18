@@ -1,38 +1,29 @@
-/*  Font Lato:      font-family: 'Lato', sans-serif; 
+/*  
+
+    Font Lato:      font-family: 'Lato', sans-serif; 
     Font Courgette: font-family: 'Courgette', cursive;
 
-h1: 3,4 rem 
-h2: 2,3 rem
-h3: 1,5 rem
-h4: 1rem
-h5: 1rem
-p: 1rem
-
-USUŃ BORDERY KOLOROWE Z KODU !!!!!!!!!!!
-
-JAK JUZ ZROBISZ RWD TO WŁĄCZ Z HTML: overflow-x: hidden; 
-
-
 */
+
 @import url(reset.css);
 
 :root{
-    --color1: #D4E0E8 ; /* bg-color - menu + footer  */
-    --color2: #92B7C7 ; /* bg2-color */
-    --color3: #415E51 ; /* gb-color ---> TEXT COLOR*/
-    --color4: #88A176 ; /* gb-color */
-    --color5: #AABD93 ; /* gb-color - background for whole site */
-    --color6: #D2D6B1 ; /* text-color */
+    --color1: #D4E0E8 ;
+    --color2: #92B7C7 ; 
+    --color3: #415E51 ; 
+    --color4: #88A176 ; 
+    --color5: #AABD93 ; 
+    --color6: #D2D6B1 ; 
     --height: 56rem;
     --main-width: calc(100vw - 17px);
+    --smile-offset: 150px
 }
 
 html{
     font-family: 'Lato', sans-serif;
     font-size: 10px;
     line-height: 15px;
-    overflow-x: hidden;
-    
+    overflow-x: hidden; 
 }
 
 h1 {
@@ -55,19 +46,11 @@ h5 {
     font-size:1 rem;
 }
 
-
-
-
-
-
-
-
 /* 
 ----------------------------------------------------------------------------------------------------------------------------------------------
 START HEADER
 ---------------------------------------------------------------------------------------------------------------------------------------------- 
 */
-
 
 
 /* 
@@ -93,7 +76,6 @@ header{
     justify-content: space-between;
 }
 
-
 /* 
 --------------------------------------
 LOGO HEADER
@@ -105,8 +87,6 @@ LOGO HEADER
     box-sizing: border-box;
     padding: 1rem;
 }
-
-
 
 /* 
 --------------------------------------
@@ -123,22 +103,18 @@ NAV-MENU HEADER
 
 }
 
-
 nav a {
     font-size: 2.0rem;
     text-decoration: none;
     color: var(--color3);
     font-weight: 800;
-
 }
-
 
 /* 
 ----------------------------------------------------------------------------------------------------------------------------------------------
 END HEADER
 ---------------------------------------------------------------------------------------------------------------------------------------------- 
 */
-
 
 
 
@@ -160,11 +136,7 @@ main{
     /* background-color: var(--color2); */
     min-height: calc(100vh - 20rem);
     width: var(--main-width)
-   
-    
-
 }
-
 
 /* 
 --------------------------------------
@@ -178,9 +150,7 @@ section.hero{
     background-image: url(../img/hero.jpg) ;
     background-repeat: no-repeat;
     background-size: cover;
-
 }
-
 
 /* 
 --------------------------------------
@@ -191,17 +161,16 @@ ABOUT ME SECTION
 /* Main styling for about me section */
 section.aboutme{
     min-height : 50rem;
-    /* border: solid 2px red; */
     display: flex;
     justify-content: space-around;
     align-items: center;
     font-size: 2rem;
     background-color: var(--color5);
-
 }
 
 /* Container with photo and caption - AboutMe section */
 .aboutme-photo-container{
+    margin:5rem;
     margin-top: 12rem;
     display:flex;
     flex-direction: column;
@@ -218,7 +187,6 @@ section.aboutme{
     color: orange;   
     text-shadow: -1px 0 #fff, 1px 0 #fff, 0 -1px #fff, 0 1px #fff ;
 }
-
 
 
 /* Photo inside container in AboutMe section */
@@ -256,8 +224,7 @@ section.aboutme{
     text-align: center;
     font-family: 'Courgette', cursive;
     font-size: 2.5rem;
-    margin: 2rem;
-
+    margin: 4rem;
 }
 
 /* Styling smile after AboutMe text */
@@ -267,6 +234,7 @@ section.aboutme{
     animation: smileRolling 5s;
     animation-iteration-count: infinite;
     transition-timing-function: ease-in-out ;
+    margin-bottom: 2rem;
 }
 
 @keyframes smileRolling {
@@ -276,7 +244,7 @@ section.aboutme{
     }
 
     25% {
-        transform:translateX(150px) rotate(360deg);
+        transform:translateX(var(--smile-offset)) rotate(360deg);
     }
 
     50% {
@@ -284,7 +252,7 @@ section.aboutme{
     }
 
     75% {
-        transform:translateX(-150px) rotate(-360deg);
+        transform:translateX( calc(var(--smile-offset) - 2 * var(--smile-offset)) ) rotate(-360deg);
     }
 
     100% {
@@ -302,9 +270,7 @@ EXPERIENCE SECTION
 /* Main styling for experience section */
 section.exp{
     min-height : 50rem;
-    /* min-height : 100vh; */
     background-color: var(--color2);
-    /* border: solid 2px yellow; */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -323,7 +289,6 @@ section.exp{
     color: var(--color3);
     text-shadow: -2px 0 #000, 2px 0 #000, 0 -2px #000, 0 2px #000 ;
     text-align: center;
-
 }
 
 /* Styling for container with hitherto jobs */
@@ -332,9 +297,6 @@ section.exp{
     flex-wrap: wrap;
     justify-content: center;
     align-content: space-between;
-    
-    
-
 }
 
 /* Specific container with one job */
@@ -344,14 +306,12 @@ section.exp{
     border-radius: 5rem;
     margin: 2rem;
     width: calc(100vw/2 - 5%);
-    /* width:80rem; */
     min-height: 30rem;
     display: flex;
     flex-direction: column;
     align-content: space-around;
     align-items: center;
     justify-content: center;
-    
 }
 
 /* Container with one job - time header */
@@ -390,10 +350,7 @@ section.exp{
     list-style-position: inside;
     text-align: center;
     margin: .5rem;
-
 }
-
-
 
 /* 
 --------------------------------------
@@ -405,7 +362,6 @@ SKILLS SECTION
 section.skills{
     min-height : 50rem;
     background-color: var(--color5);
-    /* border: solid 2px red; */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -426,7 +382,6 @@ section.skills{
     font-family: 'Courgette', cursive;
     color: var(--color3);
     text-shadow: -1px 0 #fff, 1px 0 #fff, 0 -1px #fff, 0 1px #fff ;
-    
 }
 
 /* CARD - Card styling */
@@ -436,7 +391,7 @@ section.skills{
     justify-content: center;
     flex-direction: column;
     background-color: var(--color1);
-    margin: 2rem 2rem;
+    margin: 2rem 3rem;
     width: 30rem;
     height: 35rem;
     border-radius: 5rem ;
@@ -539,9 +494,6 @@ section.skills{
     font-size: 2.5rem;
     color: var(--color3);
     text-shadow: -1px 0 #fff, 1px 0 #fff, 0 -1px #fff, 0 1px #fff ;
-
-
-
 }
 
 /* 
@@ -549,7 +501,6 @@ section.skills{
 HOBBY SECTION
 -------------------------------------- 
 */
-
 
 /* Main styling for hobby section */
 section.hobby{
@@ -570,16 +521,13 @@ section.hobby{
     font-family: 'Courgette', cursive;
     color: var(--color3);
     text-shadow: -2px 0 #000, 2px 0 #000, 0 -2px #000, 0 2px #000 ;
-
 }
 
 /* Styling container(includes all cards)- lev1 */
 .hobby-container-main{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-
-    
+    justify-content: space-around;  
 }
 
 /* Styling container (one card) - lev2 */
@@ -589,38 +537,30 @@ section.hobby{
     border: solid .5rem var(--color6);
     margin: 1rem;
     border-radius: 10rem;
-
 }
 
 /* Styling container (img + txt) - lev3 */
 .hobby-container-inside{
     display: flex;
     align-items: center;
-    /* width:80rem; */
-    flex: 1 100% auto;
-    overflow: hidden;
 }
 
 /* Styling img into lev3 container */
 .hobby-container-inside img{
-    width: 25vw;
+    width: 20vw;
     padding: 2rem;
-    border-radius: 15rem;
-    
+    border-radius: 15rem; 
 }
 
 /* Styling img into lev3 container after hover */
 .hobby-container-inside img:hover{
     transform: scale(1.02);
-    
 }
 
 /* Styling txt into lev3 container */
 .hobby-container-inside p{
-    max-width: 35rem;
-    /* height: 20vh; */
+    max-width: 25rem;
     text-align: center;
-    /* padding: 1rem; */
     margin-right: 2rem;
     margin-bottom: 2rem;
     font-size: 1.8rem;
@@ -633,10 +573,8 @@ section.hobby{
     color: var(--color3);
     font-size: 3rem;
     text-shadow: -1px 0 #fff, 1px 0 #fff, 0 -1px #fff, 0 1px #fff;
+    margin: 1rem;
 }
-
-
-
 
 /* 
 --------------------------------------
@@ -648,7 +586,6 @@ CONTACT SECTION
 section.contact{
     min-height : 50rem;
     background-color: var(--color5);
-    /* border: solid 2px red; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -669,7 +606,6 @@ section.contact{
     font-family: 'Courgette', cursive;
     color: var(--color3);
     text-shadow: -1px 0 #fff, 1px 0 #fff, 0 -1px #fff, 0 1px #fff ;
-    
 }
 
 /* Form styling 1lev container */
@@ -695,8 +631,6 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: stretch; */
-
 }
 
 /* Styling for each element in form */
@@ -728,22 +662,18 @@ form *{
 
 /* Space needed for animated thanks */
 .space {
-    
     height: var(--height);
     position: relative;
-    /* border: solid 2px red; */
 }
 
 /* Styling for text "THANK YOU" + relative position + animation SCALE */
 .thanks {
- 
     position: relative;
     left:0;
     top: calc( var(--height) - 1.5 * var(--height) );
     transform: translateY(-50%);
     animation: scale 20s; 
     animation-iteration-count: infinite;
-    
 }
 
 /* Styling for letters container + animation SPIN */
@@ -763,7 +693,6 @@ form *{
     animation-iteration-count: infinite;
     color: red;
     text-shadow: -1px 0 #fff, 1px 0 #fff, 0 -1px #fff, 0 1px #fff;
-    
 }
 
 /* Styling each letter */
@@ -774,7 +703,6 @@ form *{
     animation-iteration-count: infinite;
     color: green;
     text-shadow: -1px 0 #fff, 1px 0 #fff, 0 -1px #fff, 0 1px #fff;
-    
 }
 
 /* Styling each letter */
@@ -785,7 +713,6 @@ form *{
     animation-iteration-count: infinite;
     color: blue;
     text-shadow: -1px 0 #fff, 1px 0 #fff, 0 -1px #fff, 0 1px #fff;
-    
 }
 
 /* Styling each letter */
@@ -796,8 +723,6 @@ form *{
     animation-iteration-count: infinite;
     color: orange;
     text-shadow: -1px 0 #fff, 1px 0 #fff, 0 -1px #fff, 0 1px #fff;
-
-    
 }
 
 /* Styling each letter */
@@ -808,8 +733,6 @@ form *{
     animation-iteration-count: infinite;
     color: yellow;
     text-shadow: -1px 0 #000, 1px 0 #000, 0 -1px #000, 0 1px #000;
-
-    
 }
 
 /* Styling each letter */
@@ -820,8 +743,6 @@ form *{
     animation-iteration-count: infinite;
     color: black;
     text-shadow: -1px 0 #fff, 1px 0 #fff, 0 -1px #fff, 0 1px #fff;
-
-    
 }
 
 /* Styling each letter */
@@ -832,8 +753,6 @@ form *{
     animation-iteration-count: infinite;
     color: purple;
     text-shadow: -1px 0 #fff, 1px 0 #fff, 0 -1px #fff, 0 1px #fff;
-
-    
 }
 
 /* Styling each letter */
@@ -844,13 +763,10 @@ form *{
     animation-iteration-count: infinite;
     color: white;
     text-shadow: -1px 0 #000, 1px 0 #000, 0 -1px #000, 0 1px #000;
-
-    
 }
 
 /* Animation for appear and disappear letters */
 @keyframes animateLetters {
-
     0% {
         bottom: -100px;
     }
@@ -866,13 +782,10 @@ form *{
     100% {
         bottom: -100px;
     }
-
 }
 
 /* Animation for spining */
 @keyframes spin {
-
-
     0% {transform:rotate(0deg)}
 
     25% {transform:rotate(360deg)}
@@ -880,13 +793,10 @@ form *{
     50% {transform:rotate(-0deg)}
 
     100% {transform:rotate(360deg)}
-
 }
 
 /* Animation for scaling */
 @keyframes scale {
-
-
     0% {transform:scale(1)}
 
     20% {transform:scale(1.5)}
@@ -896,9 +806,7 @@ form *{
     80% {transform:scale(1.5)}
 
     100% {transform:scale(1)}
-
 }
-
 
 /* 
 ----------------------------------------------------------------------------------------------------------------------------------------------
@@ -906,21 +814,11 @@ END MAIN
 ---------------------------------------------------------------------------------------------------------------------------------------------- 
 */
 
-
-
-
-
-
-
-
-
 /* 
 ----------------------------------------------------------------------------------------------------------------------------------------------
 START FOOTER
 ---------------------------------------------------------------------------------------------------------------------------------------------- 
 */
-
-
 
 /* 
 --------------------------------------
@@ -931,10 +829,8 @@ WHOLE FOOTER
 footer{
     background-color: var(--color1);
     min-height: 10rem;
-    width: var(--main-width)
-   
+    width: var(--main-width);
 }
-
 
 /* 
 --------------------------------------
@@ -995,12 +891,6 @@ a.footer-aboutme {
     list-style-type: disc;
     margin: 0.3rem;
 }
-
-
-
-
-
-
 
 /* 
 --------------------------------------
@@ -1069,7 +959,6 @@ COPYRIGHT FOOTER
     padding: 2rem;
 }
 
-
 /* 
 ----------------------------------------------------------------------------------------------------------------------------------------------
 END FOOTER
@@ -1077,6 +966,941 @@ END FOOTER
 */
 
 
+/* 
+----------------------------------------------------------------------------------------------------------------------------------------------
+MEDIA QUERIES START
+---------------------------------------------------------------------------------------------------------------------------------------------- 
+*/
+
+
+@media only screen and (min-width: 1229px) and (max-width: 1386px) {
+
+    /*
+    ROOT
+    */
+
+    /*
+    MENU
+    */
+
+    /*
+    ABOUT ME
+    */
+
+    /*
+    EXPERIENCE
+    */
+
+    .exp-inside-container{
+        width: 80vw;
+    }
+
+    /*
+    SKILLS
+    */
+
+    /*
+    HOBBY
+    */
+
+    /*
+    CONTACT
+    */
+
+    /*
+    FOOTER
+    */
+
+}
+
+@media only screen and (min-width: 1070px) and (max-width: 1228px) {
+
+    /*
+    ROOT
+    */
+
+
+    /*
+    MENU
+    */
+
+    /*
+    ABOUT ME
+    */
+
+    /*
+    EXPERIENCE
+    */
+
+    .exp-inside-container{
+        width: 80vw;
+    }
+
+    /*
+    SKILLS
+    */
+
+    /*
+    HOBBY
+    */
+
+    .hobby-container{
+        width: 80vw;
+    }
+
+    .hobby-container-inside img{
+        width: 30vw;
+    }
+
+    .hobby-container-inside p{
+        max-width: 40vw;
+    }
+
+    /*
+    CONTACT
+    */
+
+    /*
+    FOOTER
+    */
+
+}
+
+@media only screen and (min-width: 880px) and (max-width: 1070px) {
+
+
+    /*
+    ROOT
+    */
+
+    :root {
+        --smile-offset:130px
+    }
+
+    /*
+    MENU
+    */
+
+    /*
+    ABOUT ME
+    */
+
+    .aboutme-text {
+        font-size: 2rem;
+        font-weight: 400;
+    }
+
+    .smile{
+        font-size: 4rem;
+    }
+
+    /*
+    EXPERIENCE
+    */
+
+    .exp-inside-container{
+        width: 80vw;
+    }
+
+    /*
+    SKILLS
+    */
 
 
 
+    /*
+    HOBBY
+    */
+
+    .hobby-container{
+        width: 80vw;
+    }
+
+    .hobby-container-inside img{
+        width: 30vw;
+    }
+
+    .hobby-container-inside p{
+        max-width: 40vw;
+    }
+
+    /*
+    CONTACT
+    */
+
+    /*
+    FOOTER
+    */
+
+}
+
+@media only screen and (min-width: 807px) and (max-width: 879px) {
+
+    /*
+    ROOT
+    */
+
+    :root {
+        --smile-offset:120px
+    }
+
+    /*
+    MENU
+    */
+
+
+
+    /*
+    ABOUT ME
+    */
+
+    .aboutme-text {
+        font-size: 1.8rem;
+        font-weight: 500;
+    }
+
+    .smile{
+        font-size: 3.5rem;
+    }
+
+    /*
+    EXPERIENCE
+    */
+
+    .exp-inside-container{
+        width: 80vw;
+    }
+
+    /*
+    SKILLS
+    */
+
+
+    /*
+    HOBBY
+    */
+
+    .hobby-container{
+        width: 80vw;
+    }
+
+    .hobby-container-inside img{
+        width: 30vw;
+    }
+
+    .hobby-container-inside p{
+        max-width: 40vw;
+    }
+
+    /*
+    CONTACT
+    */
+
+    /*
+    FOOTER
+    */
+}
+
+@media only screen and (min-width: 700px) and (max-width: 807px) {
+
+
+    /*
+    ROOT
+    */
+
+    :root {
+        --smile-offset:240px
+    }
+
+    /*
+    MENU
+    */
+
+
+
+    /*
+    ABOUT ME
+    */
+
+    .aboutme-text {
+        font-size: 2.5rem;
+        font-weight: 500;
+    }
+
+    .smile{
+        font-size: 5rem;
+    }
+
+    section.aboutme{
+        flex-direction: column;
+    }
+
+    /*
+    EXPERIENCE
+    */
+
+    .exp-inside-container{
+        width: 80vw;
+    }
+
+    /*
+    SKILLS
+    */
+
+
+
+    /*
+    HOBBY
+    */
+
+    .hobby-container{
+        width: 80vw;
+    }
+
+    .hobby-container-inside img{
+        width: 30vw;
+    }
+
+    .hobby-container-inside p{
+        max-width: 40vw;
+    }
+
+    /*
+    CONTACT
+    */
+
+
+
+    /*
+    FOOTER
+    */
+
+    .fa {
+        margin: 1rem 1rem; 
+    }
+
+}
+
+@media only screen and (min-width: 570px) and (max-width: 700px) {
+
+    /*
+    ROOT
+    */
+
+    :root {
+        --smile-offset:240px;
+        --height: 48rem;
+    }
+
+    /*
+    MENU
+    */
+
+
+
+    /*
+    ABOUT ME
+    */
+
+    .aboutme-text {
+        font-size: 2.5rem;
+        font-weight: 500;
+    }
+
+    .smile{
+        font-size: 5rem;
+    }
+
+    section.aboutme{
+        flex-direction: column;
+    }
+
+    /*
+    EXPERIENCE
+    */
+
+    .exp-inside-container{
+        width: 80vw;
+    }
+
+    /*
+    SKILLS
+    */
+
+
+
+    /*
+    HOBBY
+    */
+
+    .hobby-container{
+        width: 80vw;
+    }
+
+    .hobby-container-inside img{
+        width: 30vw;
+    }
+
+    .hobby-container-inside p{
+        max-width: 40vw;
+        font-size: 1.3rem;
+        margin-right: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    /*
+    CONTACT
+    */
+
+    .description-contact{
+        font-size: 4rem;
+    }
+    
+    form {
+       flex-direction: column;
+    }
+
+    .thanks p {
+        font-size: 4rem;
+    }
+
+    /*
+    FOOTER
+    */
+
+    .fa {
+        margin: 1rem 1rem; 
+    }
+
+}
+
+@media only screen and (min-width: 466px) and (max-width: 570px) {
+
+
+    /*
+    ROOT
+    */
+
+    :root {
+        --smile-offset:180px;
+        --height: 48rem;
+    }
+
+    /*
+    MENU
+    */
+
+    nav a {
+        font-size: 2.0rem;
+        margin: 0 2.2rem;
+    
+    }
+
+    /*
+    ABOUT ME
+    */
+
+    .aboutme-text {
+        font-size: 2.5rem;
+        font-weight: 500;
+    }
+
+    .smile{
+        font-size: 5rem;
+    }
+
+    section.aboutme{
+        flex-direction: column;
+    }
+
+    /*
+    EXPERIENCE
+    */
+
+    .exp-inside-container{
+        width: 80vw;
+    }
+
+    /*
+    SKILLS
+    */
+
+
+
+    /*
+    HOBBY
+    */
+
+    .hobby-container{
+        width: 80vw;
+    }
+
+    .hobby-container-inside {
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .hobby-container-inside img{
+        width: 70vw;
+    }
+
+    .hobby-container-inside p{
+        max-width: 60vw;
+        font-size: 1.5rem;
+        margin-right: 0rem;
+    }
+
+    .container-description-hobby{
+        font-size: 2.5rem;
+        margin-top: 2rem;   
+    }
+
+    /*
+    CONTACT
+    */
+
+    .description-contact{
+        font-size: 4rem;
+    }
+    
+    form {
+       flex-direction: column;
+    }
+
+    .thanks p {
+        font-size: 4rem;
+    }
+
+    /*
+    FOOTER
+    */
+
+    .fa {
+        margin: 1rem 1rem; 
+    }
+
+}
+
+@media only screen and (min-width: 458px) and (max-width: 465px) {
+
+
+    /*
+    ROOT
+    */
+
+    :root {
+        --smile-offset:180px;
+        --height: 48rem;
+    }
+
+    /*
+    MENU
+    */
+
+    nav a {
+        font-size: 2.0rem;
+        margin: 0 1rem;
+    }
+
+    /*
+    ABOUT ME
+    */
+
+    .aboutme-text {
+        font-size: 2.5rem;
+        font-weight: 500;
+    }
+
+    .smile{
+        font-size: 5rem;
+    }
+
+    section.aboutme{
+        flex-direction: column;
+    }
+
+    /*
+    EXPERIENCE
+    */
+
+    .exp-inside-container{
+        width: 80vw;
+    }
+
+    /*
+    SKILLS
+    */
+
+
+
+    /*
+    HOBBY
+    */
+
+    .hobby-container{
+        width: 80vw;
+    }
+
+    .hobby-container-inside {
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .hobby-container-inside img{
+        width: 70vw;
+    }
+
+    .hobby-container-inside p{
+        max-width: 60vw;
+        font-size: 1.5rem;
+        margin-right: 0rem;
+    }
+
+
+    .container-description-hobby{
+        font-size: 2.5rem;
+        margin-top: 2rem; 
+    }
+
+    /*
+    CONTACT
+    */
+
+    .description-contact{
+        font-size: 4rem;
+    }
+    
+    form {
+       flex-direction: column;
+    }
+
+    .thanks p {
+        font-size: 3.8rem;
+    }
+
+    /*
+    FOOTER
+    */
+
+    .fa {
+        margin: 1rem 1rem; 
+    }
+
+    .container-context-footer{
+        flex-direction: column;
+    }
+
+    .container-context-footer-items{
+        margin: 2rem 0;
+    }
+
+    .container-context-footer-items:first-child{
+        align-items: center;
+    }
+
+    .container-context-footer-items:first-child *{
+        font-size: 1.7rem;
+    }
+
+    a.footer-aboutme {
+        font-size: 1.9rem;
+    }
+
+}
+
+@media only screen and (min-width: 418px) and (max-width: 457px) {
+
+
+    /*
+    ROOT
+    */
+
+    :root {
+        --smile-offset:140px;
+        --height: 38rem;
+    }
+
+    /*
+    MENU
+    */
+
+    nav a {
+        font-size: 2.0rem;
+        margin: 0 1rem;
+    
+    }
+
+    /*
+    ABOUT ME
+    */
+
+    section.aboutme{
+        flex-direction: column;
+    }
+
+    .aboutme-text {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+
+    .smile{
+        font-size: 4rem;
+    }
+
+    .aboutme-photo-container:hover{
+        transform: scale(1.05);  
+    }
+
+
+    /*
+    EXPERIENCE
+    */
+
+    .exp-inside-container{
+        width: 80vw;
+    }
+
+    /*
+    SKILLS
+    */
+
+
+
+    /*
+    HOBBY
+    */
+
+    .hobby-container{
+        width: 80vw;
+    }
+
+    .hobby-container-inside {
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .hobby-container-inside img{
+        width: 70vw;
+    }
+
+    .hobby-container-inside p{
+        max-width: 60vw;
+        font-size: 1.5rem;
+        margin-right: 0rem;
+    }
+
+    .container-description-hobby{
+        font-size: 2.5rem;
+        margin-top: 2rem; 
+    }
+
+    /*
+    CONTACT
+    */
+
+    .description-contact{
+        font-size: 3rem;
+    }
+    
+    form {
+       flex-direction: column;
+    }
+
+    .thanks p {
+        font-size: 3rem;
+    }
+
+    /*
+    FOOTER
+    */
+
+    .fa {
+        margin: 1rem 1rem; 
+    }
+
+    .container-context-footer{
+        flex-direction: column;
+    }
+
+    .container-context-footer-items{
+        margin: 2rem 0;
+    }
+
+    .container-context-footer-items:first-child{
+        align-items: center;
+    }
+
+    .container-context-footer-items:first-child *{
+        font-size: 1.7rem;
+    }
+
+    a.footer-aboutme {
+        font-size: 1.9rem;
+    }
+
+}
+
+@media only screen and (min-width: 300px) and (max-width: 417px) {
+
+    /*
+    ROOT
+    */
+
+    :root {
+        --smile-offset:100px;
+        --height: 25rem;
+    }
+
+    /*
+    MENU
+    */
+
+    nav a {
+        font-size: 1.6rem;
+        margin: 0 2rem;
+    }
+
+    /*
+    ABOUT ME
+    */
+
+    section.aboutme{
+        flex-direction: column;
+    }
+
+    .aboutme-photo-container:hover{
+        transform: scale(1.05);  
+    }
+
+    .aboutme-photo-container img {
+        width:  20rem;
+    }
+    
+    .photo-name{
+        font-size: 2.9rem;
+    }
+    
+    .photo-title{
+        font-size: 2.5rem;
+    }
+
+    .aboutme-text {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+
+    .smile{
+        font-size: 4rem;
+    }
+
+
+    /*
+    EXPERIENCE
+    */
+
+    .description-exp {
+        font-size: 3.8rem;
+    }
+
+    .exp-inside-container{
+        width: 80vw;
+    }
+
+
+    /*
+    SKILLS
+    */
+
+    .description-skills{
+        font-size: 4rem;
+    }
+
+    /*
+    HOBBY
+    */
+
+    .hobby-container{
+        width: 80vw;
+    }
+
+    .hobby-container-inside {
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .hobby-container-inside img{
+        width: 70vw;
+    }
+
+    .hobby-container-inside p{
+        max-width: 60vw;
+        font-size: 1.5rem;
+        margin-right: 0rem;
+    }
+
+    .container-description-hobby{
+        font-size: 2.5rem;
+        margin-top: 2rem;
+    }
+
+    /*
+    CONTACT
+    */
+
+    .sex label {
+        margin-left: 0;
+    }
+
+    .sex label label{
+        display: block;
+        text-align: left;
+    }
+
+    .description-contact{
+        font-size: 2.5rem;
+    }
+
+    form {
+        flex-direction: column;
+    }
+ 
+
+    .thanks p {
+         font-size: 2rem;
+    }
+
+    /*
+    FOOTER
+    */
+
+    .fa {
+        margin: 1rem 6rem; 
+    }
+    
+    a.footer-aboutme {
+        font-size: 1.9rem;
+    }
+
+    .container-context-footer{
+        flex-direction: column;
+    }
+
+    .container-context-footer-items{
+        margin: 2rem 0;
+    }
+
+    .container-context-footer-items:first-child{
+        align-items: center;
+    }
+
+    .container-context-footer-items:first-child *{
+        font-size: 1.7rem;
+    }
+
+}
+  
+/* 
+----------------------------------------------------------------------------------------------------------------------------------------------
+MEDIA QUERIES END
+---------------------------------------------------------------------------------------------------------------------------------------------- 
+*/
