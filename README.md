@@ -4,11 +4,17 @@
 
 
 ## Użyte technologie:
-1.HTML
-2.CSS
+1. HTML
+2. CSS
 
 ## LINK DO DZIAŁAJĄCEJ STRONY:
 [Moja wizytówka](https://sebastianjajesnica.github.io/BusinessCard/ "Sebastian Jajeśnica - Wizytówka")
+
+
+## Treść strony:
+* Strona przedstawia moją sylwetkę, tj. Sebastiana Jajeśnicy, uczestnika otwartego kursu programowania webowego CodersCamp. Jest to swoiste CV, gdzie zamieściłem wszelkie informacje na temat mojej osoby. Można tam też znaleźć odnośniki do profili społecznościowych, gdzie można mnie znaleźć. 
+
+* Pozdrawiam i zachęcam do przeglądania storny i kontaktu z moją osobą ! :) 
 
 ## Zrealizowane założenia w projekcie:
 * Box-model
@@ -39,9 +45,10 @@
     ![flexbox](./img_readme/4.PNG)
 
 
-### Użyte fonty: 
+### Użyte czcionki: 
 1. [Font Lato](https://fonts.google.com/specimen/Lato?query=lato "Font Lato")
 2. [Font Courgette](https://fonts.google.com/specimen/Courgette?query=Courgette "Font Courgette")
+2. [Font Awesome Brand Icons](https://www.w3schools.com/icons/fontawesome_icons_brand.asp "Font Awesome Brand Icons")
 
 ### Użyte zdjęcia:
 1. Darmowa licencja - Iconfinder:
