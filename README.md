@@ -1,6 +1,13 @@
-# MUSZE TO ZROBIĆ 
+# CODERS CAMP - Projekt 1
+## HTML + CSS
+## WIzytówka
 
-# MUSZE TO ZROBIĆ 
+# UŻYTE TECHNOLOGIE:
+1.HTML
+2.CSS
+
+# LINK DO DZIAŁAJĄCEJ STRONY:
+[Moja wizytówka][https://sebastianjajesnica.github.io/BusinessCard/ "Sebastian Jajeśnica - Wizytówka"]
 
 # MUSZE TO ZROBIĆ 
 
