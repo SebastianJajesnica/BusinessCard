@@ -1,6 +1,6 @@
 # CODERS CAMP - PROJEKT 1
 * Wizytówka (HTML + CSS)
-* Użycie tylko HTML i CSS. Bez JavaScript
+* Użycie tylko HTML i CSS. Bez JavaScript.
 
 
 ## Użyte technologie:
