@@ -1,5 +1,6 @@
 # CODERS CAMP - PROJEKT 1
 * Wizytówka (HTML + CSS)
+* Użycie tylko HTML i CSS. Bez JavaScript
 
 
 ## Użyte technologie:
@@ -26,16 +27,16 @@
 
 ### Przykładowe miejsca realizacji założeń:
 * Animacje keyframes - obracający się uśmiech:
-    ![zdjęcie uśmiechu](./img_readme/1.png)
+    ![zdjęcie uśmiechu](./img_readme/1.PNG)
 
 * Zewnętrzny font:
-    ![font zewnętrzny](./img_readme/2.png)
+    ![font zewnętrzny](./img_readme/2.PNG)
 
 * Formularz:
-    ![formularz](./img_readme/3.png)
+    ![formularz](./img_readme/3.PNG)
 
 * Użycie flexboxa:
-    ![flexbox](./img_readme/4.png)
+    ![flexbox](./img_readme/4.PNG)
 
 
 ### Użyte fonty: 
@@ -44,7 +45,7 @@
 
 ### Użyte zdjęcia:
 1. Darmowa licencja - Iconfinder:
-    * [Użyta ikona](https://www.iconfinder.com/icons/4288584/and_business_finance_personal_portfolio_profile_resume_ "Logo")
+    * [Użyta ikona](https://www.iconfinder.com/icons/4288584/and_business_finance_personal_portfolio_profile_resume_icon "Logo")
     
 2. Darmowa licencja - Pexels :
     * [Hero](https://www.pexels.com/pl-pl/zdjecie/metal-chrome-moc-zelazo-190574/ "Hero")
