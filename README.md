@@ -48,7 +48,12 @@
 ### Użyte czcionki: 
 1. [Font Lato](https://fonts.google.com/specimen/Lato?query=lato "Font Lato")
 2. [Font Courgette](https://fonts.google.com/specimen/Courgette?query=Courgette "Font Courgette")
-2. [Font Awesome Brand Icons](https://www.w3schools.com/icons/fontawesome_icons_brand.asp "Font Awesome Brand Icons")
+3. [Font Mali](https://fonts.google.com/specimen/Mali?category=Handwriting&subset=latin-ext&sidebar.open=true&selection.family=Petit+Formal+Script&query=mali "Font Mali")
+4. [Font Awesome Brand Icons](https://www.w3schools.com/icons/fontawesome_icons_brand.asp "Font Awesome Brand Icons")
+
+
+
+
 
 ### Użyte zdjęcia:
 1. Darmowa licencja - Iconfinder:
