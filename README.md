@@ -36,7 +36,7 @@
     ![zdjęcie uśmiechu](./img_readme/1.PNG)
 
 * Zewnętrzny font:
-    ![font zewnętrzny](./img_readme/2.PNG)
+    ![font zewnętrzny](./img_readme/2a.PNG)
 
 * Formularz:
     ![formularz](./img_readme/3.PNG)
