@@ -618,12 +618,16 @@ form *{
     margin: 1rem
 }
 
-.sex legend{
+.sex {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
 }
 
-.sex-type {
-    display: inline-block;
+.sex legend {
+    margin:0;
+    text-align: center;
 }
 
 .form-two-container textarea {
